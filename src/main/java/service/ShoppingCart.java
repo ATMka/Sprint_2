@@ -11,20 +11,17 @@ public class ShoppingCart {
 
     public double getTotalPriceWithoutDiscount(){
         double totalPrice = 0;
-        for(int i = 0; i < this.foods.length; i++){
-            totalPrice += this.foods[i].getAmount() * this.foods[i].getPrice();
+        for (Food food : this.foods) {
+            totalPrice += food.getAmount() * food.getPrice();
         }
         return totalPrice;
     }
 
     public double getTotalPriceWithDiscount(){
         double totalPrice = 0;
-        for(int i = 0; i < this.foods.length; i++){
-            if(this.foods[i].getDiscount() != 0){
-                totalPrice += (this.foods[i].getAmount() * this.foods[i].getPrice()) * this.foods[i].getDiscount() / 100;
-            }
-            else {
-                totalPrice += this.foods[i].getAmount() * this.foods[i].getPrice();
+        for (Food food : this.foods) {
+            if (food.getDiscount() != 0) {
+                totalPrice += (food.getAmount() * food.getPrice()) * food.getDiscount() / 100;
             }
         }
         return totalPrice;
@@ -32,9 +29,9 @@ public class ShoppingCart {
 
     public double getTotalPriceVeganFoodWithoutDiscount(){
         double totalPrice = 0;
-        for(int i = 0; i < this.foods.length; i++){
-            if(this.foods[i].isVegetarian() && this.foods[i].getDiscount() == 0){
-                totalPrice += this.foods[i].getAmount() * this.foods[i].getPrice();
+        for (Food food : this.foods) {
+            if (food.isVegetarian() && food.getDiscount() == 0) {
+                totalPrice += food.getAmount() * food.getPrice();
             }
         }
         return totalPrice;
