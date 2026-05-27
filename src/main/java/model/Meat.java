@@ -9,7 +9,7 @@ public class Meat extends Food{
     }
 
     @Override
-    public double getDiscount(double price) {
+    public double getDiscount() {
         return 0;
     }
 }

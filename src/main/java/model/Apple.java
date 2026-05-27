@@ -17,8 +17,8 @@ public class Apple extends Food {
     }
 
     @Override
-    public double getDiscount(double price) {
-        if (Objects.equals(colour, Colour.colourRed)){
+    public double getDiscount() {
+        if (Objects.equals(colour, Colour.RED)){
             return Discount.redAppleDiscount;
         }
         return 0;
