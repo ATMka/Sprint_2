@@ -21,7 +21,7 @@ public class ShoppingCart {
         double totalPrice = 0;
         for (Food food : this.foods) {
             if (food.getDiscount() != 0) {
-                totalPrice += (food.getAmount() * food.getPrice()) * food.getDiscount() / 100;
+                totalPrice += (food.getAmount() * food.getPrice()) * (100 - food.getDiscount()) / 100;
             }
         }
         return totalPrice;
@@ -30,7 +30,7 @@ public class ShoppingCart {
     public double getTotalPriceVeganFoodWithoutDiscount(){
         double totalPrice = 0;
         for (Food food : this.foods) {
-            if (food.isVegetarian() && food.getDiscount() == 0) {
+            if (food.isVegetarian()) {
                 totalPrice += food.getAmount() * food.getPrice();
             }
         }
