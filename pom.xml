@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://apache.org"
-         xmlns:xsi="http://w3.org"
-         xsi:schemaLocation="http://apache.org http://apache.org">
+<project xmlns="https://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="https://w3.org"
+         xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://apache.org">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.yandex.praktikum</groupId>
