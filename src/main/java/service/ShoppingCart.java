@@ -23,6 +23,7 @@ public class ShoppingCart {
             if (food.getDiscount() != 0) {
                 totalPrice += (food.getAmount() * food.getPrice()) * (100 - food.getDiscount()) / 100;
             }
+            else totalPrice += food.getAmount() * food.getPrice();
         }
         return totalPrice;
     }
